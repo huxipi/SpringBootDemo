@@ -13,7 +13,7 @@ spec:
   selector:
     app: maven
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: maven-deployment
@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
         - name: maven
-          image: 192.168.0.108:5000/maven:latest
+          image: 192.168.43.197:5000/maven:latest
           ports:
           - containerPort: 8080
           env:
