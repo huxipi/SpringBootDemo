@@ -19,6 +19,9 @@ metadata:
   name: maven-deployment
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: gitlab-runner-ack-gitlab-runner
   template:
     metadata:
       labels:
