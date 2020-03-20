@@ -11,6 +11,20 @@
 	<name>spring-boot-demo</name>
 	<description>Demo project for Spring Boot</description>
 
+
+	 <repositories>
+	     <repository>
+	         <id>nexus</id>
+	         <name>nexus</name>
+	         <url>http://192.168.43.197:8081/repository/maven-public/</url>         <releases>
+	            <enabled>true</enabled>
+	         </releases>
+	         <snapshots>
+	             <enabled>true</enabled>
+	         </snapshots>
+	     </repository>
+	 </repositories>
+
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -46,7 +60,32 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>4.1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.19</version>
+		</dependency>
+
 	</dependencies>
+	 <pluginRepositories>
+	     <pluginRepository>
+	         <id>nexus</id>
+	         <name>nexus</name>
+	         <url>http://192.168.43.197:8081/repository/maven-public/</url>
+	         <releases>
+	             <enabled>true</enabled>
+	         </releases>
+	         <snapshots>
+	             <enabled>true</enabled>
+	         </snapshots>
+	     </pluginRepository>
+	 </pluginRepositories>
+
 
 	<build>
 		<plugins>
