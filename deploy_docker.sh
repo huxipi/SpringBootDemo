@@ -11,7 +11,7 @@ appName=$3
 #password=
 
 tag=$(date +%s)
-server_path=172.20.10.11:5000
+server_path=172.20.10.8:5000
 target_image=${projectName}:${tag}
 #${BUILD_NUMBER}
 echo ${target_image}
